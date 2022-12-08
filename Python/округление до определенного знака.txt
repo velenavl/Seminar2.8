@@ -1,0 +1,8 @@
+import math
+n = int(input('Введите количество цифр после запятой: '))
+print('Число π: {:.50f}'.format(math.pi))
+a = math.pi
+b = round(a,n+1)*10**n
+c = math.modf(b)
+a = c[1] / 10**n
+print(f'Число π с заданной точностью: {a:.50f} ')
